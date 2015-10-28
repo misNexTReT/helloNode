@@ -3,7 +3,6 @@ var router = express.Router();
 var utils_json = require('./utils/utils_json');
 
 
-
 /* GET home page. */
 global.paginas.push('/');
 router.get('/', function(req, res, next) {
