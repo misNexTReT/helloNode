@@ -1,0 +1,19 @@
+
+extends layout
+
+block content
+
+	//LOGIN
+	h1.tituloH2(align="center") NodeJs by DSG
+	#wrapper.form-signin
+		#userLogin
+			fieldset
+				input.form-control(id="username", type="text", name="User", placeholder="Usuario")
+				input.form-control(id="password", type="password", name="Password", placeholder="Password")
+				
+				div.alert.alert-danger.hide(id="errorRegistro" role="alert" align="center")
+					strong Error! 
+					"Usuario o contraseña incorrectos."
+
+				button.btn.btn-primary.btn-block.btn-lg(id="login", value="Entrar") Entrar
+				button.btn.btn-block.btn-lg.btn-default(id="registrar", value="Registrar") Registrar

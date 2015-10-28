@@ -1,0 +1,22 @@
+//CAROUSEL
+
+div#carrousel(style="width: 800px; margin: 0 auto")
+	div.carousel.slide(id='carousel-example-generic' data-ride="carousel")
+		ol.carousel-indicators
+			li.active(data-target="#carousel-example-generic" data-slide-to="0")
+			li(data-target="#carousel-example-generic" data-slide-to="1")
+		
+		div.carousel-inner(role="listbox")
+			div.item.active
+				img(src="http://www.klosur.com/wp-content/uploads/2014/07/nodejs-1920x1200.png")
+			div.item
+				img(src="http://www.wallpaperup.com/uploads/wallpapers/2013/12/03/182679/efddea4ac7f19462dba4e5947e74a3d9.jpg")
+		
+		a.left.carousel-control(href="#carousel-example-generic" role="button" data-slide="prev")
+			span.glyphicon.glyphicon-chevron-left(aria-hidden="true")
+			span.sr-only Anterior
+		a.right.carousel-control(href="#carousel-example-generic" role="button" data-slide="next")
+			span.glyphicon.glyphicon-chevron-right(aria-hidden="true")
+			span.sr-only Siguiente
+
+

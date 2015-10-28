@@ -1,0 +1,50 @@
+doctype html
+html
+	head
+		title= title
+		
+		//JQUERY
+		script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js')
+		script(src='//code.jquery.com/ui/1.11.4/jquery-ui.js')
+		link(rel='stylesheet', href='//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css')
+			
+			
+		
+		//BOOTSTRAP
+		link(rel='stylesheet', href='/plugins/bootstrap/css/bootstrap.min.css')
+		link(rel='stylesheet', href='/plugins/bootstrap/css/bootstrap-theme.min.css')
+		link(rel='stylesheet', href='/plugins/bootstrap/css/bootstrap-dialog.min.css')
+		script(src='/plugins/bootstrap/js/bootstrap.min.js')
+		script(src='/plugins/bootstrap/js/bootstrap-dialog.min.js')
+
+		//DATATABLE
+		link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css')
+		link(rel='stylesheet', href='https://cdn.datatables.net/1.10.9/css/dataTables.bootstrap.min.css')
+		script(src='https://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js')
+		script(src='https://cdn.datatables.net/1.10.9/js/dataTables.bootstrap.min.js')
+
+
+		//CSS
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		link(rel='stylesheet', href='/stylesheets/signin.css')
+
+		//PACK JS
+		script(src='/javascripts/plugins/jquery.cookie.js')
+		script(src='/javascripts/init/esqueleto_init.js')
+		script(src='/javascripts/init/usuario_init.js')
+		script(src='/javascripts/init/dani_init.js')
+		script(src='/javascripts/usuarios/usuario.js')
+
+		//METAS
+		meta(name="theme-color" content="#3F51B5")
+
+
+	if logout
+		body
+			div.containertheme-showcase#content
+				block content
+	else		
+		body
+			include ./navbar.jade
+			div.containertheme-showcase#content
+				block content

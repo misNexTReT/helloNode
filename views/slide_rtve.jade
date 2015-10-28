@@ -1,0 +1,63 @@
+extends layout
+
+block content
+
+	//PROCESO DETALLADO
+	br
+	br
+	div.panel.panel-info
+		div.panel-heading
+			h1.panel-title SLIDER RTVE: Trabajando con...
+			h4
+				a(href="https://nodejs.org/en/" style="text-decoration:none" target="_blank")
+					span.label.label-primary NodeJS
+				a(href="http://www.json.org/" style="text-decoration:none" target="_blank")
+					span.label.label-primary Json
+				a(href="https://api.jquery.com/deferred.promise/" style="text-decoration:none" target="_blank")
+					span.label.label-primary Promises
+				a(href="http://jade-lang.com/" style="text-decoration:none" target="_blank")
+					span.label.label-primary Jade
+				a(href="http://getbootstrap.com/" style="text-decoration:none" target="_blank")
+					span.label.label-primary Bootstrap
+		div.panel-body
+			ul 
+				li Dentro del modulo "utils_json.js" se encuentra la function "getJsonPromise(url)" que mediante promesas y deferred nos devolvera el json de la peticion que le hallamos pasado
+				br
+				li Desde "index.js" pedimos utils_json para poder usarlo "require('./utils/utils_json');" y lo usamos en nuestra peticion de "/rtve" con "utils_json.getJsonPromise(url);"
+				br
+				li Ahora que tenemos nuestro json, se lo pasamos a nuestra vista "slide_rtve.jade" que entendera y procesara para pintarlo en un slide de bootstrap
+
+
+
+
+	//SLIDER RTVE
+	if itemsJson[0]
+
+		h2.tituloH3(style="text-align:center;") Slider RTVE
+		div#slide_rtve(style="max-width: 1200px; margin: 0 auto")
+			div.carousel.slide(id='carousel-example-generic' data-ride="carousel")
+				ol.carousel-indicators
+					each item, i in itemsJson
+						if i === 0
+							li.active(data-target="#carousel-example-generic" data-slide-to=i)
+						else
+							li(data-target="#carousel-example-generic" data-slide-to=i)
+				
+				div.carousel-inner(role="listbox")
+					each item, i in itemsJson
+						if i === 0
+							div.item.active
+								img(src=item.imgPortada)
+						else
+							div.item
+								img(src=item.imgPortada)
+				
+
+				a.left.carousel-control(href="#carousel-example-generic" role="button" data-slide="prev")
+					span.glyphicon.glyphicon-chevron-left(aria-hidden="true")
+					span.sr-only Anterior
+				a.right.carousel-control(href="#carousel-example-generic" role="button" data-slide="next")
+					span.glyphicon.glyphicon-chevron-right(aria-hidden="true")
+					span.sr-only Siguiente
+
+

@@ -1,0 +1,52 @@
+
+extends layout
+
+block content
+
+	//PROCESO DETALLADO
+	br
+	br
+	div.panel.panel-info
+		div.panel-heading
+			h1.panel-title GESTION DE USUSARIOS: Trabajando con...
+			h4
+				a(href="https://nodejs.org/en/" style="text-decoration:none" target="_blank")
+					span.label.label-primary NodeJS
+				a(href="https://jquery.com/" style="text-decoration:none" target="_blank")
+					span.label.label-primary jQuery
+				a(href="http://www.json.org/" style="text-decoration:none" target="_blank")
+					span.label.label-primary MongoDb
+				a(href="https://www.mongodb.org/" style="text-decoration:none" target="_blank")
+					span.label.label-primary Jade
+				a(href="http://getbootstrap.com/" style="text-decoration:none" target="_blank")
+					span.label.label-primary Bootstrap
+		div.panel-body
+			ul 
+				li Desde el modulo "users.js" se lee la peticion a la BBDD de MongoDb para conseguir la lista de usuarios y se pasa el json resultante como parametro a la vista
+				br
+				li Por otro lado, en el mismo "users.js" se escucha una peticion POST para borrar un usuario, la cual llamamos mediante AJAX por jQuery en "usuario.js" pasandole un JSON con el usuario que queremos borrar.
+
+
+
+	// USER LIST
+
+	h2.tituloH3(style="text-align:center;") Lista de Usuarios
+	#userList.col-sm-6.col-centered
+		table.table.table-striped.table-bordered(id="listaUsuarios" cellspacing="0")
+			thead
+				tr.active
+					th #
+					th id
+					th Usuario
+					th Email
+					th Borrar
+			tbody
+				each user, i in usersJson
+					tr
+						td(scope="row") !{i+1}
+						td(id="userid") !{user._id}
+						td(id="username") !{user.username}
+						td(id="email") !{user.email}
+						td(id="borrar" style="text-align:center;")
+							if i != 0
+								span.glyphicon.glyphicon-trash(style="cursor:pointer;" id="borrarUsuario")

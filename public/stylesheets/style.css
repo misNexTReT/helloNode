@@ -1,0 +1,94 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.tituloH1 {
+	font-weight:900;
+	font-size:8em;
+	letter-spacing:-5px;
+	color:#285E8E;
+	text-align:center;
+	margin:0 0 10px 0;
+	text-shadow:0 0 30px rgba(58,93,125,0.67);
+	line-height:1em;
+	-webkit-animation:shakey .2s ease-in-out alternate;
+	-moz-animation:shakey .2s ease-in-out alternate;
+	-webkit-animation-delay:1s;
+	-webkit-transform:translate3d(0,0,0) transition:all .2s linear;
+	-o-transition:all .2s linear;
+	-moz-transition:all .2s linear;
+	-webkit-transition:all .2s linear;
+}
+
+.tituloH2 {
+	font-weight:900;
+	font-size:5em;
+	letter-spacing:-5px;
+	color:#285E8E;
+	text-align:center;
+	margin:0 0 10px 0;
+	text-shadow:0 0 30px rgba(58,93,125,0.67);
+	line-height:1em;
+	-webkit-animation:shakey .2s ease-in-out alternate;
+	-moz-animation:shakey .2s ease-in-out alternate;
+	-webkit-animation-delay:1s;
+	-webkit-transform:translate3d(0,0,0) transition:all .2s linear;
+	-o-transition:all .2s linear;
+	-moz-transition:all .2s linear;
+	-webkit-transition:all .2s linear;
+}
+
+.tituloH3 {
+	font-weight:900;
+	font-size:3em;
+	letter-spacing:-5px;
+	color:#285E8E;
+	text-align:center;
+	margin:0 0 10px 0;
+	text-shadow:0 0 30px rgba(58,93,125,0.67);
+	line-height:1em;
+	-webkit-animation:shakey .2s ease-in-out alternate;
+	-moz-animation:shakey .2s ease-in-out alternate;
+	-webkit-animation-delay:1s;
+	-webkit-transform:translate3d(0,0,0) transition:all .2s linear;
+	-o-transition:all .2s linear;
+	-moz-transition:all .2s linear;
+	-webkit-transition:all .2s linear;
+}
+
+.fila-iconos {
+	display:inline-block;
+	margin:22px 10px 23px;
+	color:#fff;
+	font-size:1.4em;
+	font-weight:200;
+	color:#999;
+	text-transform:uppercase;
+	font-size:.9em;
+}
+
+.fondo {
+	background:#000 url('/images/fondo_nodejs.jpg') no-repeat center top;
+}
+
+.fondoPlano {
+	background:#000 url('/images/fondo_plano.jpg') no-repeat center top;
+}
+
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+
+.ui-widget-content{
+	border-radius:4px;
+}
+
+.ui-state-focus {
+	border-radius:4px;	
+}

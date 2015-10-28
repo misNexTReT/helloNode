@@ -1,0 +1,44 @@
+//NAV BAR
+
+nav.navbar.navbar-default.navbar( role="navigation" )
+        .navbar-header
+            button.navbar-toggle.collapsed( type="button", data-toggle="collapse", data-target="#navbar", aria-expanded="false", aria-controls="navbar")
+                span.sr-only Toggle navigation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+            a.navbar-brand(href="/index") Hello NodeJS by DSG
+ 
+        #navbar.collapse.navbar-collapse
+            ul.nav.navbar-nav
+                li(id="navHome"): a(href="/index" style="cursor:pointer") Home
+                li(id="navDani"): a(href="/dani" style="cursor:pointer") Dani
+                li.admin(id="navUsersGestion"): a(href="/users/gestion" style="cursor:pointer") Usuarios
+                li(id="navRTVE"): a(href="/rtve" style="cursor:pointer") RTVE
+                li.dropdown
+                    a.dropdown-toggle( href="#", data-toggle="dropdown", role="button", aria-expanded="false" ) Enlaces 
+                        span.caret
+                    ul.dropdown-menu( role="menu" )
+                        li: a(style="cursor:pointer") NodeJs
+                        li: a(style="cursor:pointer") Npm
+                        li: a(style="cursor:pointer") MongoDb
+                        li.divider
+                        li.dropdown-header Guias y Ayudas
+                        li: a(style="cursor:pointer") Tutorial Node
+                        li: a(style="cursor:pointer") Tutorial Git
+                li.dropdown
+                    a.dropdown-toggle( href="#", data-toggle="dropdown", role="button", aria-expanded="false" ) Contacto 
+                        span.caret
+                    ul.dropdown-menu( role="menu" )
+                        li: a(style="cursor:pointer") Sobre DSG
+                        li: a(href="https://github.com/danielsotogarcia" style="cursor:pointer") Github DSG
+                        li: a(style="cursor:pointer") Email
+            ul.nav.navbar-nav.navbar-right
+                li: a.navbar-brand(style="cursor:pointer" id="navUserName") navUserName
+                li: a.glyphicon.glyphicon-off(style="cursor:pointer" id="logout")
+            form.navbar-form.navbar-right
+                div.input-group
+                    input.form-control(id="buscador", placeholder="Search...")
+                    span.input-group-btn
+                        button.btn.btn-default(type="button")
+                            span.glyphicon.glyphicon-search(style="cursor:pointer" id="buscar")

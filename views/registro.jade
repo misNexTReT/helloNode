@@ -1,0 +1,21 @@
+
+extends layout
+
+block content
+
+	//REGISTRO
+	h2.tituloH3 Crear Cuenta
+	#wrapper.form-signin
+		#userRegistro
+			fieldset
+				input.form-control(id="username", type="text", name="User", placeholder="Usuario")
+				input.form-control(id="email", type="text", name="Email", placeholder="Email")
+				input.form-control(id="password", type="password", name="Password", placeholder="Password")
+				input.form-control(id="passwordConfirm", type="password", name="PasswordConfirm", placeholder="Confirmar Password")
+				
+				div.alert.alert-danger.hide(id="errorRegistro" role="alert" align="center")
+					strong Error! 
+					"Debes rellenar todos los campos."
+
+				button.btn.btn-primary.btn-block.btn-lg(id="aceptarRegistro", value="Aceptar") Aceptar
+				button.btn.btn-default.btn-block.btn-lg(id="cancelarRegistro", value="Cancelar") Cancelar
