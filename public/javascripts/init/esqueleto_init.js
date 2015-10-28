@@ -18,8 +18,6 @@ $(document).ready(function() {
     }
 
 
-
-
     //BUSCADOR
 	$( "#buscador" ).autocomplete({
 		source: ['nodejs','jquery','javascript','npm','mongodb','bootstrap','grunt','git','sublimetext','dsg','ajax','html','express','css3','github','datatable','']
