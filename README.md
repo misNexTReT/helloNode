@@ -17,6 +17,7 @@ Proyecto para aprender conceptos de NodeJs, asi como utilizar diferentes tecnolo
 0. Instalar [NodeJs]
 1. Clonar el proyecto en nuestro entorno local, se recomienda ```C:\Proyects\helloNode\```
 2. Descargar todos los node_modules dependientes para la app con
+    
     ```sh  
     $ npm update
     $ npm install
