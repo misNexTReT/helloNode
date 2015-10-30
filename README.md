@@ -16,7 +16,7 @@ Proyecto para aprender conceptos de NodeJs, asi como utilizar diferentes tecnolo
 
 0. Instalar [NodeJs]
 1. Clonar el proyecto en nuestro entorno local, se recomienda ```C:\Proyects\helloNode\```
-2. Descargar todos los node_modules dependientes para la app con
+2. Descargar todos los node_modules dependientes para la app con las siguientes lineas de comando
     
     ```sh  
     $ npm update
@@ -24,6 +24,7 @@ Proyecto para aprender conceptos de NodeJs, asi como utilizar diferentes tecnolo
     ```
 3. Instalar [Mongodb]
 4. Crear la BBDD relacionada con nuestro proyecto ***helloNode***. Para ello tenemos que ir a la carpeta ```C:\Program Files\MongoDB\Server\3.0\bin``` de MongoDb y lanzar el siguiente comando.
+    
     ```sh
     $ .\mongod --dbpath C:\Proyects\helloNode\data 
     ```   
